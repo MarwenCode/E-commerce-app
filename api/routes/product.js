@@ -16,5 +16,18 @@ productRoute.post("/", async(req, res) => {
 });
 
 
+//get all products
+productRoute.get("/", async(req, res) => {
+    try {
+        const products = await Product.find()
+        res.status(200).json(jobs)
+        
+    } catch (error) {
+        res.status(500).json(error)
+    }
+
+})
+
+
 
 export default productRoute;
