@@ -1,0 +1,32 @@
+.register{
+  width: 100%;
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: center;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  ),
+  url("https://images.pexels.com/photos/5632397/pexels-photo-5632397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+background-size: cover;
+height: 100vh;
+
+  .heading{
+    display: flex;
+    margin-left: 330px;
+
+
+      img{
+        width:50px
+      }
+
+      .title{
+
+      }
+
+
+  }
+
+
+}
