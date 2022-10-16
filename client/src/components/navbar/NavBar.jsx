@@ -1,10 +1,43 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useContext, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { HiShoppingCart } from "react-icons/hi";
-import {IoLogoAndroid} from "react-icons/io"
+import {IoLogoAndroid} from "react-icons/io";
+import { AppContext } from "../../context/context";
+import axios from "axios";
 import "./navbar.scss";
 
 const NavBar = () => {
+  const { user, dispatch } = useContext(AppContext);
+
+
+
+  const Navigate = useNavigate();
+
+
+  const handleLogout = async() => {
+      // const logout = await axios.delete("/user/logout")
+      // localStorage.clear(logout)
+      localStorage.clear()
+      window.location.replace("/register")
+      // setUser(!user)
+  }
+
+
+  // const handleLogout = () => {
+  //   dispatch({ type: "LOGOUT" });
+  //   // window.location.replace("/login")
+  //   Navigate("/login");
+  // };
+
+  // const handleLogout = () => {
+  //   dispatch({ type: "LOGOUT" });
+  //   // window.location.replace("/login")
+  //   Navigate("/login");
+  // };
+
+
+
+
   return (
     <div className="navbar">
       <div className="left">
@@ -34,9 +67,24 @@ const NavBar = () => {
       </div>
 
       <div className="right">
-      <Link to="/login" className="link">
-            <span className="item">Account</span>
-          </Link>
+        {user ? 
+        
+        (
+            <button onClick={handleLogout}>sign out</button>
+          
+
+
+         ) :(
+          <Link to="/login" className="link">
+          <span className="item">Account</span>
+        </Link>
+
+      )
+      
+      
+     } 
+      
+
         <span className="cartIcon"> 
           <HiShoppingCart />
         </span>
@@ -48,3 +96,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
