@@ -1,0 +1,44 @@
+.product{
+    //   -webkit-box-shadow: 0px 0px 16px -8px rgba(212, 182, 182, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(12, 4, 4, 0.68);
+    background: linear-gradient(#f0f5f7, #e7e8f1);
+    width: 300px;
+    border: 100px;
+    border-radius: 50px;
+    height: 300px;
+    margin: 20px;
+   
+  
+    
+    
+
+    .top {
+     
+      
+        
+        .img {
+            height: 150px;
+            width:100%;
+            object-fit: cover;
+        
+           
+        }
+    }
+
+    .center{
+
+    }
+
+    .down{
+
+        .btn{
+            background-color: rgb(19, 20, 36);
+            border-radius: 10px;
+            color: white;
+            cursor:pointer;
+        }
+
+    
+    }
+
+}

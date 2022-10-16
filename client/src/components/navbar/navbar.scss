@@ -20,6 +20,23 @@
         margin-top: 20px;
         margin-left: 50px;
         display: flex;
+
+        .signoutBtn{
+            background-color: white;
+            border: none;
+            cursor: pointer;
+
+            margin-bottom: 10px;
+            margin-top: -10px;
+            width: 100%;
+            margin-left: -5px;
+            margin-right: -30px;
+            color: grey;
+        }
+
+        .signoutBtn:hover{
+            color:black
+        }
         
 
         .cartIcon {

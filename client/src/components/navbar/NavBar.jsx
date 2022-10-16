@@ -70,7 +70,7 @@ const NavBar = () => {
         {user ? 
         
         (
-            <button onClick={handleLogout}>sign out</button>
+            <button className="signoutBtn" onClick={handleLogout}>Sign out</button>
           
 
 
