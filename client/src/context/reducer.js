@@ -34,6 +34,15 @@ const reducer = (state, action) => {
         //         isFetching: false,
         //         error: true
         //     }
+        case "addToCart": {
+            return {
+                ...state, cart:[...state.cart, action.payload]
+            }
+        }
+
+
+
+
         case "LOGOUT":
             return{
                 user:null,

@@ -7,7 +7,7 @@ import axios from "axios";
 import "./navbar.scss";
 
 const NavBar = () => {
-  const { user, dispatch } = useContext(AppContext);
+  const { user, dispatch,cart } = useContext(AppContext);
 
 
 
@@ -86,7 +86,7 @@ const NavBar = () => {
       
 
         <span className="cartIcon"> 
-          <HiShoppingCart />
+          <HiShoppingCart />{cart.length}
         </span>
       
     

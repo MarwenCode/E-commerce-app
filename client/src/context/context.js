@@ -7,6 +7,9 @@ export const AppContext = React.createContext();
 const initialState = {
   user: JSON.parse(localStorage.getItem("user")) || null,
   // user: null,
+  cart:[],
+  total:0,
+  quantity:0,
 };
 
 export const AppProvider = ({ children }) => {
@@ -28,6 +31,11 @@ export const AppProvider = ({ children }) => {
     fetchData();
   }, []);
 
+  //Add to cart
+  const addToCart = (id) => {
+    dispatch({type:"addToCart", payload:id})
+  }
+
 
 
 
@@ -36,7 +44,8 @@ export const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         user: state.user,
-        items,
+        items,addToCart,
+        cart:state.cart,
 
         dispatch,
       }}>

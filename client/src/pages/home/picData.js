@@ -1,7 +1,5 @@
 export const picData = [
-    {
-        image:"http://localhost:3000/images/1.jpg"
-    },
+  
     {
         image:"http://localhost:3000/images/2.jpg"
     },
@@ -13,6 +11,10 @@ export const picData = [
     },
     {
         image:"http://localhost:3000/images/5.jpg"
+        
+    },
+    {
+        image:"http://localhost:3000/images/1.jpg"
     },
 
 

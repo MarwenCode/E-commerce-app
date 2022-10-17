@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { AppContext } from '../../context/context';
 import "./product.scss";
 
 
 const Product = ({ item }) => {
+  const { cart, addToCart } = useContext(AppContext)
 
   return (
     <div className='product'>
@@ -24,7 +26,7 @@ const Product = ({ item }) => {
 
         </div>
         <div className="down">
-            <button className='btn'>Add to cart</button>
+            <button className='btn' onClick={() => addToCart(item)}>Add to cart</button>
         </div>
         
     </div>

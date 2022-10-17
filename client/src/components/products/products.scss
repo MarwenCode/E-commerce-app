@@ -1,9 +1,84 @@
+.searchItem{
+
+    width: 150%;
+    justify-content: center;
+    
+  
+    .items{
+        margin-top: 20px;
+        margin-left: 550px;
+
+        h3{
+            margin-left: 100px;
+            font-size: large;
+            font-weight: 400;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+        }
+        input[type=radio] {
+            border: 0px;
+            width: 1%;
+            height:0px;
+            // z-index: 1;
+         
+         
+        }
+
+        .items input{
+            // position: absolute;
+            // margin-right: -100px;
+            justify-content: space-between;
+             margin-left: 60px;
+             width: 100%;
+         
+            //  visibility: hidden;
+            //  position: fixed;
+            //  opacity: 0;
+        }
+
+        .asBtn{
+            cursor: pointer;
+            // margin-left: 10px;
+            // background-color: #5b748b;
+            border-radius: 30px;
+            width: 255px;
+            margin-left: -40px;
+            margin-bottom: -50px;
+            height: 350px;
+            font-weight: 600;
+            font-size:x-large;
+            color: grey;
+
+
+        
+       
+       
+        }
+        .asBtn:hover {
+           
+            color: rgb(8, 3, 87);
+        }
+
+      
+        
+       
+
+    }
+    .items input{
+      justify-content: space-between;
+      margin-left: 60px;
+    }
+}
+
+
+
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
     grid-gap:15px;
     margin-top: 50px;
     margin-left: 30px;
+
+  
    
 
   

@@ -1,9 +1,10 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./home.scss";
 import { picData } from "./picData";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { AppContext } from "../../context/context";
 import Products from "../../components/products/Products";
+import Search from "../../components/search/Search";
 
 
 const Home = () => {
@@ -20,6 +21,20 @@ const Home = () => {
   const prevSlide = () => {
     setCurrentImage(currentImage <= 0 ? 4 : currentImage - 1);
   };
+
+
+  // useEffect(() => {
+
+  //   const autoSlider = () => {
+  //     setInterval(nextSlide, 5000)
+
+  //   }
+  //   autoSlider()
+
+    
+  // }, [currentImage])
+
+
 
 
   
@@ -51,12 +66,15 @@ const Home = () => {
             </div>
           );
         })}
-        <div className="arrowLeft">
+        {/* <div className="arrowLeft">
           <FaArrowAltCircleLeft onClick={prevSlide} />
         </div>
         <div className="arrowRight">
           <FaArrowAltCircleRight onClick={nextSlide} />
-        </div>
+        </div> */}
+      </div>
+      <div className="search">
+        {/* <Search /> */}
       </div>
 
       <div className="center">
