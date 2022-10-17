@@ -4,7 +4,7 @@ import { picData } from "./picData";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { AppContext } from "../../context/context";
 import Products from "../../components/products/Products";
-import Search from "../../components/search/Search";
+
 
 
 const Home = () => {

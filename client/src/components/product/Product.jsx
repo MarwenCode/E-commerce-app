@@ -20,9 +20,9 @@ const Product = ({ item }) => {
 
         </div>
         <div className="center">
-            <h1>{item.title} </h1>
-            <span>{item.brand} </span>
-            <span>{item.price +"$"} </span>
+            <h3 className='title'>{item.title} </h3>
+            <span className='brand'>{item.brand} </span>
+            <span className='price'>{item.price +"$"} </span>
 
         </div>
         <div className="down">
