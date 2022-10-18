@@ -5,7 +5,8 @@ import Contact from "./pages/contact/Contact";
 import Footer from "./components/footer/Footer";
 import About from "./pages/about/About";
 import Login from "./pages/login/Login";
-import Register from "./pages/register/Register"
+import Register from "./pages/register/Register";
+import CartDetails from "./components/cartdetails/CartDetails";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Home /> } />
             <Route path="/contact" element={<Contact /> } />
             <Route path="/about" element={<About /> } />
+            <Route path="/cartDetails" element={<CartDetails /> } />
             <Route path="/footer" element={<Footer /> } />
             <Route path="/login" element={<Login /> } />
             <Route path="/register" element={<Register /> } />

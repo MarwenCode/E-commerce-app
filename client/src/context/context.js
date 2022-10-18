@@ -14,7 +14,8 @@ const initialState = {
 
 export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const [items, setItems] = useState([])
+  const [items, setItems] = useState([]);
+  // const [cart, setCart] = useState([])
 
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(state.user));
@@ -32,9 +33,19 @@ export const AppProvider = ({ children }) => {
   }, []);
 
   //Add to cart
-  const addToCart = (id) => {
-    dispatch({type:"addToCart", payload:id})
-  }
+  // const addToCart = async(id) => {
+
+  //   dispatch({type:"addToCart", payload:id})
+  // }
+
+  const increase = (id) => {
+    dispatch({ type: "increase", payload:id });
+  };
+
+  const decrease = (id) => {
+    dispatch({ type: "decrease", payload:id });
+  };
+
 
 
 
@@ -43,9 +54,12 @@ export const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
+        ...state,
         user: state.user,
-        items,addToCart,
+        items,
         cart:state.cart,
+        increase,
+      
 
         dispatch,
       }}>

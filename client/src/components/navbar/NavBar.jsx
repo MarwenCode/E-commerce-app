@@ -86,7 +86,10 @@ const NavBar = () => {
       
 
         <span className="cartIcon"> 
-          <HiShoppingCart />{cart.length}
+        <Link to="/cartDetails" >
+        <HiShoppingCart className="link"/>
+        </Link>
+        {cart.length}
         </span>
       
     

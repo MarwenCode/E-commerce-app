@@ -1,10 +1,44 @@
-import React, {useContext} from 'react';
+import React, {useState,useContext} from 'react';
 import { AppContext } from '../../context/context';
+import axios from 'axios';
 import "./product.scss";
 
 
 const Product = ({ item }) => {
-  const { cart, addToCart } = useContext(AppContext)
+  const { cart, dispatch,user} = useContext(AppContext)
+
+
+  console.log(cart)
+  const addToCart = async(id) => {
+
+    const newCart = {
+      userId: user._id,
+      products:[
+        {
+          productId: item._id,
+          // quantity: cart.length,
+          price: item.price,
+          title: item.title
+
+        }
+      
+      ]
+    }
+
+    try {
+      const res = await axios.post("/cart", newCart);
+  
+      console.log(res)
+      console.log(res.data)
+    } catch (error) {
+      console.log(error);
+      
+    }
+
+    dispatch({type:"addToCart", payload:id})
+  }
+
+
 
   return (
     <div className='product'>
