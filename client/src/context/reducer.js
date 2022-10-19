@@ -7,13 +7,35 @@ const reducer = (state, action) => {
             }
         }
         case "increase": {
-            let increaseCart = state.cart.map((item) => {
-                if(item._id === action.payload) {
-                    return {...item, quantity: item.quantity + 1 , price: item.price}
+            let increaseCart = state.cart.map((cartItem) => {
+                if(cartItem._id === action.payload) {
+                    return {...cartItem, quantity: cartItem.quantity + 1 }
                 }
-                return item
+                return cartItem
             });
             return {...state, cart:increaseCart}
+          
+        }
+        case "decrease": {
+            let decreaseCart = state.cart.map((cartItem) => {
+              if(cartItem.quantity === 1) {
+                return cartItem
+              }
+              
+            //   else  {
+            //     return {...cartItem, quantity: cartItem.quantity - 1 }
+
+            //   }
+              
+
+            if(cartItem._id === action.payload) {
+                return {...cartItem, quantity: cartItem.quantity - 1 }
+            }
+            return cartItem
+            
+            });
+            return {...state, cart:decreaseCart}
+           
           
         }
 

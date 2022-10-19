@@ -5,7 +5,7 @@ import  {FaAngleRight} from 'react-icons/fa'
 import { AppContext } from '../../context/context';
 
 const CartItem = ({ item }) => {
-    const {cart, increase } = useContext(AppContext);
+    const {cart, increase, decrease} = useContext(AppContext);
     console.log(item)
   return (
     <div className='cartitem'>
@@ -18,9 +18,10 @@ const CartItem = ({ item }) => {
                 <span className='price'> {item.price} $</span>
             </div>
             <div className="left">
-            <button className='leftBtn'>
+            <button className='leftBtn' onClick={() => decrease(item._id)}>
+            {/* <button className='leftBtn' > */}
            
-           <FaAngleLeft />
+           <FaAngleLeft  />
            </button> {item.quantity}
              
                 <button className='rightBtn' onClick={() => increase(item._id)}>
