@@ -21,7 +21,7 @@ const CartDetails = () => {
       )}
 
       <div className="cart-total">
-        <h2>Cart items:{quantity}</h2>
+        <h2>Items: {quantity}</h2>
         <h2>Total : {total} $</h2>
       </div>
     </div>

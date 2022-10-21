@@ -81,9 +81,48 @@
     margin-top: 50px;
     margin-left: 30px;
     background-color: rgb(251, 252, 255);
+    margin-bottom: 150px;
 
   
    
 
   
+}
+
+
+.bestSellers{
+    // display: flex;
+    // background-color: lightblue;
+ 
+    height: 250px;
+    margin: 0% 20%;
+  
+
+    .carousel{
+        cursor: grab;
+        overflow: hidden;
+        background-color: rgb(151, 113, 113);
+      
+
+        .inner-carousel{
+            display: flex;
+            background: lightblue;
+
+
+
+            .item{
+                min-height: 20rem;
+                min-width: 30rem;
+                padding: 10px;
+             
+            }
+
+            .item img {
+                width:90%;
+                height: 60%;
+                border-radius: 2rem;
+            }
+         
+        }
+    }
 }

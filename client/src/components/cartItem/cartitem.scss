@@ -5,12 +5,15 @@
     padding: 0 20px;
     text-align: center;
     background-color: rgb(226, 231, 221);
+    border-radius: 20px;
+    cursor: pointer;
 
 
     .item{
         background-color: rgb(214, 233, 233);
         height: 150px;
         margin-top: 25px;
+    
       
 
         .right{
@@ -21,6 +24,23 @@
             img{
                 width:100px;
                 margin-top: 30px;
+            
+            }
+            
+
+            .title {
+                // margin-right: 100px;
+                // margin-left: -80px;
+                // margin-bottom: -100px;
+                margin-top: 70px;
+              
+
+            }
+            .price {
+                margin-top: 20px;
+                margin-left: 140px;
+              
+
             }
 
 
@@ -31,14 +51,15 @@
             align-items: center;
 
             
-            .rightBtn {
-             
+            .rightBtn,
+            .leftBtn  {
+               background-color: rgb(159, 170, 166);
+               border-radius: 5px;
+            
                 
             }
 
-            .leftBtn {
-              
-            }
+           
 
 
            
@@ -47,6 +68,17 @@
         }
         .down{
 
+            .remove{
+                margin-top: 20px;
+                background-color: rgb(173, 173, 202);
+                border-radius: 5px;
+            }
+
+        }
+
+        .description{
+            margin-left: 650px;
+            margin-top: -100px;
         }
 
 

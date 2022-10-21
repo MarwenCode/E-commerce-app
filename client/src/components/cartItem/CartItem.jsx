@@ -14,8 +14,13 @@ const CartItem = ({ item }) => {
               <img
                 src="images/phone3.png" 
                />
-                  <span className='title'> {item.title}</span>
+             
+             
+               <h3 className='title'> {item.title}</h3>
                 <span className='price'> {item.price} $</span>
+
+            
+              
             </div>
             <div className="left">
             <button className='leftBtn' onClick={() => decrease(item._id)}>
@@ -31,13 +36,16 @@ const CartItem = ({ item }) => {
     
 
             </div>
-            <div className="remove">
-                <button onClick={() => remove(item._id)}>
+            <div className="down">
+                <button  className="remove"  onClick={() => remove(item._id)}>
                     Remove
                 </button>
                
             
 
+            </div>
+            <div className="description">
+              <p> {item.desc}  </p>
             </div>
         </div>
 

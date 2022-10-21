@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AppContext } from "../../context/context";
 import Product from "../product/Product";
 import { bestSellers } from "./bestSellers";
+import { motion } from "framer-motion";
 import "./products.scss";
 
 const Products = ({ items }) => {
   const [selectedBrand, setSelectedBrand] = useState("");
   const radios = ["Apple", "Sumsung", "Huawei"];
+
+  //framer motion bestseller
+  const [width, setWidth] = useState(0);
+  const carousel = useRef();
+
+  useEffect(() => {
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  }, []);
 
   return (
     <>
@@ -38,24 +47,28 @@ const Products = ({ items }) => {
           .map((item, index) => (
             <Product item={item} key={index} />
           ))}
+      </div>
 
-        <div className="bestSellers">
-          {bestSellers.map((best, index) =>(
-              <div className="item" key={index}>
-              <div className="top">
+      <div className="bestSellers">
+        <h1>Best Sellers </h1>
+        <motion.div className="carousel">
+          <motion.div
+            className="inner-carousel"
+            drag="x"
+            dragConstraints={{ right: 0, left: -width }}
+            ref={carousel}
+            whileTap={{ cursor: "grabbing" }}>
+            {bestSellers.map((best) => (
+              <motion.div className="item">
                 <img className="img" src={best.image} />
-              </div>
-              <div className="center">
+              </motion.div>
+            ))}
+          </motion.div>
+          {/* <div className="center">
                 <span className="brand">{best.brand}</span>
                 <span className="price">{best.price}</span>
-              </div>
-            </div>
-
-          ))}
-         
-        
-         
-        </div>
+              </div> */}
+        </motion.div>
       </div>
     </>
   );
