@@ -38,7 +38,7 @@
             }
             .price {
                 margin-top: 20px;
-                margin-left: 140px;
+                margin-left: 62px;
               
 
             }
@@ -85,4 +85,11 @@
 
 
     }
+}
+
+.modalActive{
+    .item{
+        display: none;
+    }
+
 }

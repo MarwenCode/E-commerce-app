@@ -7,8 +7,9 @@ import Products from "../../components/products/Products";
 
 
 
+
 const Home = () => {
-  const { items } = useContext(AppContext)
+  const {items} = useContext(AppContext);
   const [currentImage, setCurrentImage] = useState(0);
 
  
@@ -83,6 +84,7 @@ const Home = () => {
       </div>
 
       <div className="down">
+
 
       </div>
     </div>

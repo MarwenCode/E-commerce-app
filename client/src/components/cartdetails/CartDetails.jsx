@@ -4,6 +4,7 @@ import CartItem from "../cartItem/CartItem";
 import PaymentModal from "../paymentModal/PaymentModal";
 import "./cartdetails.scss";
 
+
 const CartDetails = () => {
   const { cart, quantity, total,modalOpen, setModalOpen } = useContext(AppContext);
   console.log(cart);
@@ -26,7 +27,7 @@ const CartDetails = () => {
   // }
 
   return (
-    <div className="cartdetails">
+    <div  className={modalOpen ? "cartdetails" :"cartdetails" }  >
       {cart.length === 0 ? (
         <div className="cart-items">
           <h2>Your Cart is Empty</h2>
@@ -46,12 +47,16 @@ const CartDetails = () => {
 
       {cart.length > 0 && (
         <>
-          <button onClick={() => setModalOpen(true)}>Purshase items</button>
-        
+          <button   className="purchase" 
+          onClick={() => setModalOpen(true)}>Purchase items</button>
+    
+     
 
-          {modalOpen && <PaymentModal />}
+
+          
         </>
       )}
+         {modalOpen && <PaymentModal />}
     </div>
   );
 };

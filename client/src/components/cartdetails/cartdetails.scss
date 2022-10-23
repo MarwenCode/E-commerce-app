@@ -4,7 +4,7 @@
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
-    // margin-left: 250px;
+    margin-left: 250px;
 
 
     .cart-items{
@@ -18,4 +18,26 @@
         margin-top: 20px;
       
     }
+
+    .purchase{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-right: -40px;
+        padding: 10px 20px;
+        border: 1px solid rgb(167, 160, 160);
+        border-radius: 5px;
+        background: rgb(176, 183, 185);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        text-align: center;
+        appearance: button;
+    }
+
+  
+
+
+
+   
 }

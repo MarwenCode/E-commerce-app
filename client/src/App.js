@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useContext } from "react";
 import NavBar from "./components/navbar/NavBar";
 import Home from "./pages/home/Home";
 import Contact from "./pages/contact/Contact";
@@ -7,12 +8,18 @@ import About from "./pages/about/About";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import CartDetails from "./components/cartdetails/CartDetails";
+import { AppContext } from "./context/context";
+import {ToastContainer, toast } from "react-toastify"; 
+import "react-toastify/dist/ReactToastify.css";
+import "./app.scss"
 
 
 function App() {
+  const { cart, quantity, total,modalOpen, setModalOpen, increase,decrease,remove } = useContext(AppContext);
   return (
     <Router>
-    <div className="container">
+    {/* <div className="container" > */}
+    <div className={ modalOpen ? "modalActive" :  "container" } >
       <NavBar />
       <Routes>
           
@@ -29,7 +36,7 @@ function App() {
    
       </Routes>
     </div>
-    {/* <ToastContainer /> */}
+    <ToastContainer />
   </Router>
   );
 }
