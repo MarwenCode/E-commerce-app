@@ -1,4 +1,5 @@
 .searchItem{
+  
 
     width: 150%;
     justify-content: center;
@@ -72,6 +73,10 @@
     }
 }
 
+.titleBestSellers{
+    margin-left: 650px;
+}
+
 
 
 .products {
@@ -83,6 +88,7 @@
     background-color: rgb(251, 252, 255);
     margin-bottom: 150px;
 
+
   
    
 
@@ -92,35 +98,41 @@
 
 .bestSellers{
     // display: flex;
-    // background-color: lightblue;
- 
+    background-color: rgb(246, 242, 242);
+    
     height: 250px;
-    margin: 0% 20%;
+    margin: 0% 25%;
+    margin-bottom: 150px;
+    border-radius: 30px;
+
   
 
     .carousel{
         cursor: grab;
         overflow: hidden;
-        background-color: rgb(151, 113, 113);
+        // background-color: rgb(151, 113, 113);
       
 
         .inner-carousel{
             display: flex;
-            background: lightblue;
+            // background: lightblue;
 
 
 
             .item{
                 min-height: 20rem;
                 min-width: 30rem;
-                padding: 10px;
+                // padding: 10px;
+          
              
             }
 
             .item img {
-                width:90%;
+                width: 50%;
                 height: 60%;
                 border-radius: 2rem;
+                pointer-events: none;
+          
             }
          
         }

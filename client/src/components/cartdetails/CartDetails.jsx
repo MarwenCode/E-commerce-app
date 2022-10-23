@@ -1,11 +1,30 @@
 import React, { useState, useContext } from "react";
 import { AppContext } from "../../context/context";
 import CartItem from "../cartItem/CartItem";
-import "./cartdetails.scss"
+import PaymentModal from "../paymentModal/PaymentModal";
+import "./cartdetails.scss";
 
 const CartDetails = () => {
-  const { cart, quantity, total } = useContext(AppContext);
+  const { cart, quantity, total,modalOpen, setModalOpen } = useContext(AppContext);
   console.log(cart);
+
+
+  //   const checkout = async () => {
+  //     await fetch('http://localhost:5500/checkout', {
+  //         method: "POST",
+  //         headers: {
+  //             'Content-Type': 'application/json'
+  //         },
+  //         body: JSON.stringify({items: cart.items})
+  //     }).then((response) => {
+  //         return response.json();
+  //     }).then((response) => {
+  //         if(response.url) {
+  //             window.location.assign(response.url); // Forwarding user to Stripe
+  //         }
+  //     });
+  // }
+
   return (
     <div className="cartdetails">
       {cart.length === 0 ? (
@@ -24,6 +43,15 @@ const CartDetails = () => {
         <h2>Items: {quantity}</h2>
         <h2>Total : {total} $</h2>
       </div>
+
+      {cart.length > 0 && (
+        <>
+          <button onClick={() => setModalOpen(true)}>Purshase items</button>
+        
+
+          {modalOpen && <PaymentModal />}
+        </>
+      )}
     </div>
   );
 };

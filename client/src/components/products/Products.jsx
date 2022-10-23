@@ -7,7 +7,7 @@ import "./products.scss";
 
 const Products = ({ items }) => {
   const [selectedBrand, setSelectedBrand] = useState("");
-  const radios = ["Apple", "Sumsung", "Huawei"];
+  const radios = ["Apple", "Samsung", "Huawei"];
 
   //framer motion bestseller
   const [width, setWidth] = useState(0);
@@ -48,9 +48,9 @@ const Products = ({ items }) => {
             <Product item={item} key={index} />
           ))}
       </div>
-
+      <h1 className="titleBestSellers">Best Sellers </h1>
       <div className="bestSellers">
-        <h1>Best Sellers </h1>
+      
         <motion.div className="carousel">
           <motion.div
             className="inner-carousel"

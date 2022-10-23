@@ -70,14 +70,14 @@ const Login = () => {
             />
           </div>
           <div className="form-group">
-            <button className="btn">Login In</button>
+            <button className="btn">Login</button>
           </div>
         </form>
       </section>
 
       <section className="down">
         <Link to="/register" className="link">
-          <span>If your have an account please clic here !</span>
+          <span>If your have an account please click here !</span>
         </Link>
       </section>
     </div>

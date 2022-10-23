@@ -17,6 +17,9 @@ export const AppProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   // const [cart, setCart] = useState([])
 
+  //modal payment 
+  const [modalOpen, setModalOpen] = useState(false);
+
 
   //localStorahe user
   useEffect(() => {
@@ -86,6 +89,7 @@ export const AppProvider = ({ children }) => {
         items,
         cart:state.cart,
         increase,decrease,remove,
+        modalOpen, setModalOpen,
        
         
       
