@@ -4,17 +4,11 @@ import { picData } from "./picData";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { AppContext } from "../../context/context";
 import Products from "../../components/products/Products";
-
-
-
+import Footer from "../footer/Footer";
 
 const Home = () => {
-  const {items} = useContext(AppContext);
+  const { items } = useContext(AppContext);
   const [currentImage, setCurrentImage] = useState(0);
-
- 
-
-
 
   const nextSlide = () => {
     setCurrentImage(currentImage >= 4 ? 0 : currentImage + 1);
@@ -23,28 +17,12 @@ const Home = () => {
     setCurrentImage(currentImage <= 0 ? 4 : currentImage - 1);
   };
 
-
-  // useEffect(() => {
-
-  //   const autoSlider = () => {
-  //     setInterval(nextSlide, 5000)
-
-  //   }
-  //   autoSlider()
-
-    
-  // }, [currentImage])
-
-
-
-
-  
-
-
-
-
-
-
+  useEffect(() => {
+    const autoSlider = () => {
+      setInterval(nextSlide, 5000);
+    };
+    autoSlider();
+  }, [currentImage]);
 
   return (
     <div className="home">
@@ -74,18 +52,14 @@ const Home = () => {
           <FaArrowAltCircleRight onClick={nextSlide} />
         </div> */}
       </div>
-      <div className="search">
-        {/* <Search /> */}
-      </div>
+      <div className="search">{/* <Search /> */}</div>
 
       <div className="center">
-        <Products  items={items} />
-
+        <Products items={items} />
       </div>
 
       <div className="down">
-
-
+        <Footer />
       </div>
     </div>
   );

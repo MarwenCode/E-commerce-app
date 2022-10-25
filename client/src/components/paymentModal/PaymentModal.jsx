@@ -1,14 +1,45 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { AppContext } from '../../context/context';
 import "./paymentModal.scss";
 import { ToastContainer, toast } from 'react-toastify';
+import axios from "axios";
 
 const PaymentModal = () => {
-    const { modalOpen, setModalOpen } = useContext(AppContext);
+    const { modalOpen, setModalOpen, user} = useContext(AppContext);
 
     const [name, setName] = useState('')
     const [cardNumber, setcardNumber] = useState('')
     const [code, setCode] = useState('')
+
+
+
+
+   //make an order
+  //  const buyItems = (e) => {
+  //   e.preventDefault();
+
+  //   const newOrder = {
+  //     userId: user._id
+
+  //     // products:[ {
+  //     //   productId: item.id,
+  //     //   quantity:quantity
+
+
+  //     // }
+        
+  //     // ]
+  //   }
+  //   try {
+  //     const res = axios.post("/cart", newOrder)
+  //     setOrder(res.data)
+  //     console.log(res)
+  //   }catch(error) {
+  //     console.log(error)
+  //   }
+  //   buyItems()
+
+  //  }
 
     const buyItems = () => {
       toast.dark("Thank you for your purchase")
@@ -60,7 +91,7 @@ const PaymentModal = () => {
          
           
           <div className="form-groupBtn">
-            <button className="btn" onClick={buyItems}>Submit</button>
+            <button className="btn" onClick={(e) => buyItems(e)}>Submit</button>
             <button className="cancel" onClick={() => setModalOpen(false)}>Cancel</button>
            
           </div>

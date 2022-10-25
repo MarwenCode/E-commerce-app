@@ -8,6 +8,7 @@ import About from "./pages/about/About";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import CartDetails from "./components/cartdetails/CartDetails";
+import Orders from "./pages/orders/Orders";
 import { AppContext } from "./context/context";
 import {ToastContainer, toast } from "react-toastify"; 
 import "react-toastify/dist/ReactToastify.css";
@@ -31,6 +32,7 @@ function App() {
             <Route path="/footer" element={<Footer /> } />
             <Route path="/login" element={<Login /> } />
             <Route path="/register" element={<Register /> } />
+            <Route path="/orders" element={<Orders /> } />
           
         
    

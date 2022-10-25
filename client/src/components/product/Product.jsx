@@ -55,8 +55,12 @@ const Product = ({ item }) => {
         </div>
         <div className="center">
             <h3 className='title'>{item.title} </h3>
+            <div className="middle">
             <span className='brand'>{item.brand} </span>
             <span className='price'>{item.price +"$"} </span>
+
+            </div>
+           
 
         </div>
         <div className="down">

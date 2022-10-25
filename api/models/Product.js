@@ -20,6 +20,7 @@ const ProductSchema = new mongoose.Schema(
      },
     price: { type: Number, required: true },
     quantity: { type: Number, required: true },
+    status: { type: String },
 
   },
   { timestamps: true }

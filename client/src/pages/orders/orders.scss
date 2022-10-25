@@ -1,0 +1,28 @@
+.orders {
+  
+  .order {
+    .order,
+    .order-headings {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 350px;
+      margin-bottom: 20px;
+      background: #f4f4f4;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-align: center;
+
+
+      width: 100%;
+      padding: 0 20px;
+   
+    }
+
+    .order-headings {
+      font-weight: 700;
+    }
+  }
+}
