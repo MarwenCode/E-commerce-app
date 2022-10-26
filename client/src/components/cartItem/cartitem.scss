@@ -1,18 +1,24 @@
 .cartitem{
     width: 100%;
-    max-width: 960px;
+    height: 180px;
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
-    background-color: rgb(226, 231, 221);
+    background-color: rgb(214, 233, 233);
     border-radius: 20px;
     cursor: pointer;
+ 
+  
+  
+
 
 
     .item{
         background-color: rgb(214, 233, 233);
         height: 150px;
         margin-top: 25px;
+        width: 100%;
+        
     
       
 
@@ -70,6 +76,7 @@
 
             .remove{
                 margin-top: 20px;
+                padding: 5px;
                 background-color: rgb(173, 173, 202);
                 border-radius: 5px;
             }

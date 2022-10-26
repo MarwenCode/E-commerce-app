@@ -3,6 +3,7 @@ import { AppContext } from "../../context/context";
 import Product from "../product/Product";
 import { bestSellers } from "./bestSellers";
 import { motion } from "framer-motion";
+import Rating from "../rating/Rating";
 import "./products.scss";
 
 const Products = ({ items }) => {
@@ -60,7 +61,15 @@ const Products = ({ items }) => {
             whileTap={{ cursor: "grabbing" }}>
             {bestSellers.map((best) => (
               <motion.div className="item">
+              
                 <img className="img" src={best.image} />
+                <div className="down">
+                <span className="name">{best.name}</span>
+                <Rating  className='rating'/>
+
+                </div>
+               
+            
               </motion.div>
             ))}
           </motion.div>

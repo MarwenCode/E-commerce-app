@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { AppContext } from '../../context/context';
 import "./paymentModal.scss";
 import { ToastContainer, toast } from 'react-toastify';
+import { BsFillCreditCard2BackFill } from "react-icons/bs"
 import axios from "axios";
 
 const PaymentModal = () => {
@@ -42,10 +43,16 @@ const PaymentModal = () => {
   //  }
 
     const buyItems = () => {
-      toast.dark("Thank you for your purchase")
-      setName("")
-      setcardNumber("")
-      setCode("")
+      if(!cardNumber || !code || !name) {
+        return
+      }else {
+        toast.dark("Thank you for your purchase")
+        setName("")
+        setcardNumber("")
+        setCode("")
+
+      }
+     
     }
 
 
@@ -55,6 +62,7 @@ const PaymentModal = () => {
 
         <form>
           <div className="form-group">
+         
         
             <input
               type="text"
@@ -63,14 +71,17 @@ const PaymentModal = () => {
               required
               value={cardNumber}
               onChange={(e) => setcardNumber(e.target.value)}
+              
        
             />
+             <BsFillCreditCard2BackFill  className="card"/>
+            
           </div>
           <div className="form-group">
             <input
               type="password"
               className="form-control"
-              placeholder="Enter code card"
+              placeholder="Enter card code "
               required
               value={code}
               onChange={(e) => setCode(e.target.value)}

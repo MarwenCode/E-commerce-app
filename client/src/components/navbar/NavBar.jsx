@@ -7,11 +7,11 @@ import axios from "axios";
 import "./navbar.scss";
 
 const NavBar = () => {
-  const { user, dispatch,cart } = useContext(AppContext);
+  const { user, dispatch,cart,quantity } = useContext(AppContext);
 
 
 
-  const Navigate = useNavigate();
+  
 
 
   const handleLogout = async() => {
@@ -92,7 +92,8 @@ const NavBar = () => {
         <Link to="/cartDetails" >
         <HiShoppingCart className="link"/>
         </Link>
-        {cart.length}
+        {/* {cart.length} */}
+        {quantity}
         </span>
       
     

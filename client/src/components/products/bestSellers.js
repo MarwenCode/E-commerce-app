@@ -19,23 +19,28 @@ export const bestSellers = [
 
     }, 
 
-    {  name: "GalaxyX",
+    {  
+      
+      name: "GalaxyX",
      brand:"Sumsung",
       price:"450 $",
       image: "http://localhost:3000/images/phone4.png",
 
     },
-    { brand:"Sumsung",
-      price:"450 $",
-      image: "http://localhost:3000/images/phone1.png",
-
-    },
-    { brand:"Sumsung",
+    { name: "Iphone 13", 
+      brand:"Sumsung",
       price:"450 $",
       image: "http://localhost:3000/images/phone4.png",
 
     },
-    { brand:"Sumsung",
+    { name: "GalaxyX",
+      brand:"Sumsung",
+      price:"450 $",
+      image: "http://localhost:3000/images/phone4.png",
+
+    },
+    { name: "GalaxyX",
+      brand:"Sumsung",
       price:"450 $",
       image: "http://localhost:3000/images/phone4.png",
 

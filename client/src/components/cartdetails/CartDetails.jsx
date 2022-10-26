@@ -45,6 +45,7 @@ const CartDetails = () => {
         <h2>Total : {total} $</h2>
       </div>
 
+      
       {cart.length > 0 && (
         <>
           <button   className="purchase" 
@@ -56,7 +57,11 @@ const CartDetails = () => {
           
         </>
       )}
-         {modalOpen && <PaymentModal />}
+       
+       {modalOpen && <PaymentModal />}
+
+     
+    
     </div>
   );
 };
