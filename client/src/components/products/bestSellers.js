@@ -7,7 +7,7 @@ export const bestSellers = [
     },
     
     { 
-        name: "Iphone 13", 
+      name: "Iphone 13", 
      brand:"Apple",
       price:"450 $",
       image: "http://localhost:3000/images/phone3.png",
