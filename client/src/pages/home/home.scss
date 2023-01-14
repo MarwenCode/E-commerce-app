@@ -1,17 +1,58 @@
 .home{
+  
+
 
 
 
     .top{
+       display: flex;
+    
+      
+      
 
         .backgroundImg{
-            width: 160%;
-            height: 350px;
+        
+          flex:3;
+            // width: 250%;
+            width: 850px;
+            height: 500px;
             object-fit: cover;
-            margin-top:0px;
-            // margin-left: 250px;
+            margin-top:8px;
+            margin-left: 60px;
             justify-content: center;
             align-items: center;
+        }
+
+        .content {
+          z-index: 1;
+          flex:3;
+          // margin-right: -1050px;
+          button {
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            background-color: black;
+            font-weight: 600;
+            margin-left: 150px;
+            position: absolute;
+            margin-top: 60px;
+            cursor: pointer;
+
+          }
+          
+          p {
+            width: 350px;
+            // top: 100%;
+            // left: 100%;
+            transform: translate(50%, 30%);
+            font-size: large;
+            font-weight: bold;
+            line-height: 3em;
+            
+
+          }
+          
         }
 
         .slide {

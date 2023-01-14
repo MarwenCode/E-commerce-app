@@ -7,7 +7,7 @@ import Products from "../../components/products/Products";
 import Footer from "../footer/Footer";
 
 const Home = () => {
-  const { items } = useContext(AppContext);
+    const { items } = useContext(AppContext);
   const [currentImage, setCurrentImage] = useState(0);
 
   const nextSlide = () => {
@@ -17,12 +17,12 @@ const Home = () => {
     setCurrentImage(currentImage <= 0 ? 4 : currentImage - 1);
   };
 
-  useEffect(() => {
-    const autoSlider = () => {
-      setInterval(nextSlide, 5000);
-    };
-    autoSlider();
-  }, [currentImage]);
+  // useEffect(() => {
+  //   const autoSlider = () => {
+  //     setInterval(nextSlide, 10000);
+  //   };
+  //   autoSlider();
+  // }, [currentImage]);
 
   return (
     <div className="home">
@@ -45,6 +45,17 @@ const Home = () => {
             </div>
           );
         })}
+
+        <div className="content">
+          <button>Shop now</button>
+          <p>
+            "Upgrade your mobile experience with our latest smartphone,
+            featuring a sleek design, powerful camera, and lightning-fast
+            processing for smooth multitasking. Don't miss out on this
+            limited-time offer and order yours today!"
+          </p>
+          
+        </div>
         {/* <div className="arrowLeft">
           <FaArrowAltCircleLeft onClick={prevSlide} />
         </div>

@@ -1,4 +1,5 @@
 .navbar{
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #c2baba;
@@ -6,6 +7,7 @@
     // background-color: blue;
     margin-bottom: 10px;
     margin-top: 10px;
+    max-width: 170%;
     width: 169%;
     margin-left: -5px;
     margin-right: -30px;
@@ -51,6 +53,7 @@
 
         .item{
             margin-right: 5px;
+            
         }
         .item:hover{
             color:black
@@ -62,6 +65,7 @@
 
     .center{
         flex:6;
+       
       
 
         .list{
@@ -79,6 +83,40 @@
                 cursor: pointer;
                 width: 100%;
              
+            }
+
+            .search {
+             display: flex;
+             margin-right: 150px;
+             position: relative;
+             cursor: pointer;
+
+             input {
+                width: 400px;
+                height: 30px;
+                padding: 10px;
+                border-radius: 20px;
+                margin-right: 350px;
+                border: none;
+                background-color: rgb(233, 233, 233);
+                position: absolute;
+               padding-left: 25px;
+             }
+
+             .icon {
+                z-index: 1;
+                margin: 7px;
+             }
+
+             .cancel {
+                z-index: 1;
+                margin-left: 350px;
+                position: absolute;
+            
+             }
+
+
+
             }
 
             .item:hover{

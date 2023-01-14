@@ -1,0 +1,29 @@
+.about {
+
+    margin-left: 350px;
+    width: 80%;
+    transform: translate(50%,0.6%);
+  
+    font-size: 1.2em;
+    line-height: 1.5;
+    padding: 2em;
+
+    width: 80%; /* set the width of the div */
+    margin: 0 auto; /* center the div horizontally */
+    text-align: center; /* center the text inside the div */
+    
+  
+    h1 {
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+  
+    p {
+      margin-bottom: 1em;
+    }
+  
+    .highlight {
+      font-weight: bold;
+    }
+  }
+  
