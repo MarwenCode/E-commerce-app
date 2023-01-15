@@ -68,6 +68,9 @@ const Home = () => {
       <div className="center">
         <Products items={items} />
       </div>
+      <div className="offers">
+      
+      </div>
 
       <div className="down">
         <Footer />

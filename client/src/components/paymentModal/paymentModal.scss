@@ -1,91 +1,104 @@
-.paymentModal{
-    width: 100%;
-    height: 500px;
-    margin-top: 30px;
-    overflow: hidden;
+.paymentModal {
+  width: 100%;
+  height: 350px;
+  // margin-top: 30px;
+  overflow: hidden;
 
-    form {
-        width: 30%;
-        margin: 0 auto;
+  z-index: 1;
+
+  background-color: rgba(184, 179, 179, 0.568);
+
+  width: 60%;
+  // height: 110vh;
+  position: absolute;
+  top: 100px;
+
+  display: flex;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  form {
+    width: 30%;
+    margin: 0 auto;
+
+
+    .form-group {
+      margin-bottom: 10px;
+      margin-top: 10px;
+     
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      font-family: inherit;
+      position: relative;
+
       
-        .form-group {
-            margin-bottom: 10px;
-            margin-top: 10px;
-            outline: none;
-            
-        }
-      
-        .form-group input{
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #e6e6e6;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            font-family: inherit;
-            position: relative;
-            
+   
 
-          }
+     
+    }
+    input:focus {
+      outline: none;
+    }
 
-          .card {
-            position: absolute;
-        
-            margin-left: -30px;
-            margin-top: 10px;
-            font-size: 20px;
-        
-          }
+   
 
+    .card {
+      position: absolute;
 
-          .form-groupBtn{
-            display: flex;
+      margin-left: -30px;
+      margin-top: 10px;
+      font-size: 20px;
+    }
 
-            .btn{
-                margin-top: 20px;
-                margin-bottom: 10px;
-                margin-right: 70px;
-                padding: 10px 20px;
-                border: 1px solid rgb(167, 160, 160);
-                border-radius: 5px;
-                background: rgb(176, 183, 185);
-                color: #fff;
-                font-size: 16px;
-                font-weight: 700;
-                cursor: pointer;
-                text-align: center;
-                appearance: button;
-              
-              }
-          
-           .btn:hover{
-                background-color: rgb(49, 49, 77);
-              }
-    
-              .cancel{
-                margin-top: 20px;
-                margin-bottom: 10px;
-                margin-right: -10px;
-                padding: 10px 20px;
-                border: 1px solid rgb(167, 160, 160);
-                border-radius: 5px;
-                background: rgb(176, 183, 185);
-                color: #fff;
-                font-size: 16px;
-                font-weight: 700;
-                cursor: pointer;
-                text-align: center;
-                appearance: button;
-              }
+    .form-groupBtn {
+      display: flex;
 
-              .cancel:hover{
-                background-color: rgb(49, 49, 77);
-              }
-
-
-          }
-      
-          
-      
-      
+      .btn {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-right: 70px;
+        padding: 10px 20px;
+        border: 1px solid rgb(167, 160, 160);
+        border-radius: 5px;
+        background: rgb(176, 183, 185);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        text-align: center;
+        appearance: button;
       }
+
+      .btn:hover {
+        background-color: rgb(49, 49, 77);
+      }
+
+      .cancel {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-right: -10px;
+        padding: 10px 20px;
+        border: 1px solid rgb(167, 160, 160);
+        border-radius: 5px;
+        background: rgb(176, 183, 185);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        text-align: center;
+        appearance: button;
+      }
+
+      .cancel:hover {
+        background-color: rgb(49, 49, 77);
+      }
+    }
+  }
 }

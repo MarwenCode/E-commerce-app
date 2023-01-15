@@ -20,7 +20,8 @@ function App() {
   return (
     <Router>
     {/* <div className="container" > */}
-    <div className={ modalOpen ? "modalActive" :  "container" } >
+    {/* <div className={ modalOpen ? "modalActive" :  "container" } > */}
+    <div className= "container"  >
       <NavBar />
       <Routes>
           

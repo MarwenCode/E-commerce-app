@@ -8,7 +8,8 @@ const CartItem = ({ item }) => {
   const { cart, quantity, total,modalOpen, setModalOpen, increase,decrease,remove } = useContext(AppContext);
     console.log(item)
   return (
-    <div className={modalOpen ? 'moadalActive' : 'cartitem'}  >
+    // <div className={modalOpen ? 'moadalActive' : 'cartitem'}  >
+    <div className= 'cartitem'  >
         <div className="item">
             <div className="right">
               <img

@@ -1,9 +1,18 @@
 .orders {
   margin-right: 120px;
+  position: absolute;
+  width: 50%;
+
+  
   
   .order {
+      //  position: absolute;
+      // margin-top: 80px;
+     
+  
     .order,
     .order-headings {
+   
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 20px;
@@ -19,12 +28,13 @@
 
 
       width: 160%;
-      padding: 0 20px;
+      // padding: 0 20px;
    
     }
 
     .order-headings {
       font-weight: 700;
+   
     }
   }
 }

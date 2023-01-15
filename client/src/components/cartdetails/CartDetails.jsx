@@ -27,13 +27,17 @@ const CartDetails = () => {
   // }
 
   return (
-    <div  className={modalOpen ? "cartdetails" :"cartdetails" }  >
+    <div  className="cartdetails" >
+    
+
+
       {cart.length === 0 ? (
         <div className="cart-items">
           <h2>Your Cart is Empty</h2>
         </div>
       ) : (
         <>
+     
           {cart.map((item) => (
             <CartItem key={item.id} item={item} />
           ))}
@@ -53,12 +57,14 @@ const CartDetails = () => {
     
      
 
-
+    
           
         </>
       )}
-       
+
        {modalOpen && <PaymentModal />}
+       
+      
 
      
     

@@ -15,28 +15,31 @@ body {
   margin:0;
   padding: 0;
  
+ 
 
 
 
 }
 
 .container{
-  width: 100%;
-  max-width: 960px;
-  // margin: 0 auto;
-  margin: 0 -55px;
-  padding: 0 20px;
-  text-align: center;
-
-
-
-}
-.modalActive{
-  background-color: rgb(167, 162, 162);
-  overflow: hidden;
   // width: 100%;
   // max-width: 960px;
   // margin: 0 auto;
-  // padding: 0 20px;
-  // text-align: center;
+  // margin: 0 -55px;
+  padding: 0 20px;
+  text-align: center;
+ position: relative;
+ 
+
+
+
 }
+// .modalActive{
+//   background-color: rgb(167, 162, 162);
+//   overflow: hidden;
+//   // width: 100%;
+//   // max-width: 960px;
+//   // margin: 0 auto;
+//   // padding: 0 20px;
+//   // text-align: center;
+// }
