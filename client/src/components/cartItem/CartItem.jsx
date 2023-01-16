@@ -28,7 +28,8 @@ const CartItem = ({ item }) => {
             {/* <button className='leftBtn' > */}
            
            <FaAngleLeft  />
-           </button> {item.quantity}
+           </button>
+           <span> {item.quantity}  </span> 
              
                 <button className='rightBtn' onClick={() => increase(item._id)}>
                 <FaAngleRight  />

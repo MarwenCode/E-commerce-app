@@ -6,6 +6,7 @@
     justify-content: center;
     margin-left: -150px ;
     margin-top: 60px;
+  
     
   
     .items{
@@ -15,9 +16,9 @@
         h3{
             margin-left: 100px;
             margin-bottom: 10px;
-            font-size: large;
-            font-weight: 400;
-            font-family:Verdana, Geneva, Tahoma, sans-serif
+            font-size: x-large;
+            font-weight: 700;
+            font-family: Arial, sans-serif;
         }
         input[type=radio] {
             border: 0px;
@@ -105,11 +106,12 @@
     grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
     grid-gap:15px;
     margin-top: 50px;
-    margin-left: 30px;
+    margin-left: 150px;
     background-color: rgb(251, 252, 255);
     margin-bottom: 150px;
 
-    width: 160%;
+    width: 150%;
+    overflow: hidden;
     
 
   
@@ -118,7 +120,12 @@
   
 }
 
-
+.titleBestSellers {
+    width: 300px;
+    margin-left:500px;
+    font-weight: 700;
+    color:rgb(15, 84, 124);
+}
 .bestSellers{
     // display: flex;
     background-color: rgb(246, 242, 242);

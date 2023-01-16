@@ -1,5 +1,6 @@
 import React, {useState,useContext} from 'react';
 import { AppContext } from '../../context/context';
+import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import "./product.scss";
 
@@ -36,6 +37,12 @@ const Product = ({ item }) => {
     }
 
     dispatch({type:"addToCart", payload:id})
+    toast.dark("Added to cart")
+
+
+
+
+
   }
 
 
@@ -45,7 +52,7 @@ const Product = ({ item }) => {
         <div className="top">
             <img 
             className='img'
-            src="images/phone3.jpg"
+            src={item.img}
             // src={item.img}
 
             
