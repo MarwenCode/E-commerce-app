@@ -12,7 +12,6 @@ const Order = ({ item }) => {
     <div className="order">
       <span className="id"> {item._id}</span>
       <span className="date">
-        {" "}
         {new Date(item.createdAt).toLocaleString("de-DE")}
       </span>
       <span className="title">{item.title}</span>

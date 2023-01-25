@@ -18,18 +18,14 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  
 
   form {
     width: 30%;
     margin: 0 auto;
-    
-
 
     .form-group {
       margin-bottom: 10px;
       margin-top: 10px;
-     
     }
 
     .form-group input {
@@ -39,17 +35,10 @@
       margin-bottom: 10px;
       font-family: inherit;
       position: relative;
-
-      
-   
-
-     
     }
     input:focus {
       outline: none;
     }
-
-   
 
     .card {
       position: absolute;

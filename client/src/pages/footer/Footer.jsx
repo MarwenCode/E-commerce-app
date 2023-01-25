@@ -5,7 +5,10 @@ const Footer = () => {
     const year = new Date().getFullYear();
   return (
     
-     <section className='footer'>{`Copyright © Online shop  ${year}`}</section>
+     <section className='footer'>
+      <span>{`Copyright © Online shop  ${year}`}</span>
+      
+      </section>
   )
 }
 
